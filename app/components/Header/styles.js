@@ -1,5 +1,5 @@
 import EStyleSheet from 'react-native-extended-stylesheet';
-import { StatusBar } from 'react-native';
+// import { StatusBar } from 'react-native';
 
 const styles = EStyleSheet.create({
   container: {
@@ -10,9 +10,12 @@ const styles = EStyleSheet.create({
     '@media ios': {
       paddingTop: 20,
     },
-    '@media android': {
-      paddingTop: StatusBar.currentHeight,
-    },
+    // Pushes the Settings icon away from the Android Status Bar slightly.
+    // This is commented out because we enabled the Status Bar on routes.js.
+    // The code is `cardStyle: { paddingTop: StatusBar.currentHeight },`.
+    // '@media android': {
+    //   paddingTop: StatusBar.currentHeight,
+    // },
   },
   button: {
     alignSelf: 'flex-end',
