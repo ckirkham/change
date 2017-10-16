@@ -8,6 +8,8 @@ import { ClearButton } from '../components/Buttons';
 import { LastConverted } from '../components/Text';
 import { Header } from '../components/Header';
 
+import { swapCurrency, changeCurrencyAmount } from '../actions/currencies';
+
 const TEMP_BASE_CURRENCY = 'USD';
 const TEMP_QUOTE_CURRENCY = 'GBP';
 const TEMP_BASE_PRICE = '100';
@@ -28,10 +30,14 @@ class Home extends Component {
     // console.log('press quote');
   };
   handleTextChange = (text) => {
-    console.log('change text', text);
+    // console.log('change text', text);
+    // Made this actually wotk with this.props.dispatch
+    console.log(changeCurrencyAmount());
   };
   handleSwapCurrency = () => {
-    console.log('press swap');
+    // console.log('press swap');
+    // Made this actually wotk with this.props.dispatch
+    console.log(swapCurrency());
   };
   handleOptionsPress = () => {
     this.props.navigation.navigate('Options');
